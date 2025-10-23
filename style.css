@@ -1,0 +1,117 @@
+/* --- Tổng thể --- */
+body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background: #f5f7fa;
+    color: #333;
+}
+
+/* --- Header --- */
+header {
+    background: #004aad;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: #ffda44;
+}
+
+/* --- Main & Cards --- */
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.card h2, .card h3 {
+    color: #004aad;
+    margin-top: 0;
+}
+
+/* --- Sub-card (phần nhỏ bên trong bài viết) --- */
+.sub-card {
+    background: #f0f5ff;
+    border-left: 5px solid #004aad;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* --- Danh sách --- */
+.language-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.language-list li {
+    margin: 10px 0;
+}
+
+.language-list a {
+    color: #004aad;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.language-list a:hover {
+    text-decoration: underline;
+}
+
+/* --- Footer --- */
+footer {
+    background: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    margin-top: 50px;
+    box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
+}
