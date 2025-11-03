@@ -1,12 +1,13 @@
-/* --- Tổng thể --- */
 body {
     font-family: "Segoe UI", sans-serif;
     margin: 0;
     background: #f5f7fa;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-/* --- Header --- */
 header {
     background: #004aad;
     color: white;
@@ -50,20 +51,25 @@ nav a:hover, nav a.active {
     color: #ffda44;
 }
 
-/* --- Main & Cards --- */
 main {
-    max-width: 900px;
-    margin: 40px auto;
+    width: 100%;
+    max-width: 100%;
+    margin: auto;
     padding: 0 20px;
+    flex: 1; 
+    text-align: center;
 }
-
-.card {
+/* .card {
+    display: flex;
     background: white;
     border-radius: 15px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     padding: 25px;
-    margin-bottom: 30px;
     transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+    display: inline;
 }
 
 .card:hover {
@@ -76,16 +82,14 @@ main {
     margin-top: 0;
 }
 
-/* --- Sub-card (phần nhỏ bên trong bài viết) --- */
 .sub-card {
     background: #f0f5ff;
     border-left: 5px solid #004aad;
     padding: 15px 20px;
     margin-top: 15px;
     border-radius: 10px;
-}
+} */
 
-/* --- Danh sách --- */
 .language-list ul {
     list-style: none;
     padding: 0;
@@ -105,13 +109,263 @@ main {
     text-decoration: underline;
 }
 
-/* --- Footer --- */
 footer {
     background: #222;
     color: #bbb;
     text-align: center;
     padding: 15px;
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: auto;
     box-shadow: 0 -3px 6px rgba(0,0,0,0.2);
+}
+
+h3 {
+    margin-bottom: 30px;
+}
+.cards a{
+    text-decoration: none;
+    color: #004aad;
+}
+.cards a:hover{
+    text-decoration: underline;
+}
+.cards {
+    display: flex;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 25px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 50px;
+    justify-content: center;
+    width: 100%;
+}
+
+.cards:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+.blog-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 60px;
+    box-sizing: border-box;
+}
+
+.blog-title {
+    text-align: center;
+    color: #004aad;
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    margin: 15px;
+    color: #004aad;
+}
+
+.blog-card a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s;
+}
+
+.blog-card a:hover {
+    color: #ffda44;
+}
+
+.blog-card p {
+    margin: 0 15px 20px 15px;
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+/* Trang chủ hiện đại kiểu 28Tech */
+
+.home-container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero section */
+/* Hero section - đậm màu chủ đạo */
+.hero {
+    background: linear-gradient(135deg, #004aad, #007bff);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+}
+.topics {
+    padding: 60px 80px;
+    text-align: center;
+}
+
+.topics h2 {
+    font-size: 2em;
+    color: #004aad;
+    margin-bottom: 40px;
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.topic-card {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.topic-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.topic-card h3 {
+    color: #004aad;
+    margin: 15px 0 5px 0;
+}
+
+.topic-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.topic-card a:hover {
+    color: #ffda44;
+}
+
+.topic-card p {
+    padding: 0 20px 20px 20px;
+    color: #004aad;
+    font-size: 15px;
+}
+
+/* 1. KỸ THUẬT LAYOUT LINH HOẠT (FLEX/GRID) */
+.hero-section {
+    display: flex;
+    flex-direction: column; /* Xếp chồng trên mobile, không thay đổi trên desktop */
+    align-items: center;
+    text-align: center;
+}
+
+.skill-list, .project-grid {
+    display: grid;
+    /* Mặc định trên Desktop: 3 cột hoặc 2 cột */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+}
+
+/* 2. MEDIA QUERIES cho thiết bị di động */
+@media (max-width: 768px) {
+    /* Tablet & Màn hình nhỏ hơn */
+    
+    /* Điều hướng (Navigation): Đổi thành menu xếp chồng */
+    header nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    /* Layout: Chuyển sang 1-2 cột */
+    .skill-list, .project-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 cột trên Tablet */
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Mobile Phone */
+
+    /* Layout: Chuyển sang 1 cột duy nhất */
+    .skill-list, .project-grid {
+        grid-template-columns: 1fr; 
+    }
+    
+    /* Font size: Giảm cỡ chữ tiêu đề */
+    h1 {
+        font-size: 2rem;
+    }
+
+    .hero-section .profile-photo {
+        max-width: 150px;
+    }
+}
+.skill-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+}
+.skill-card h3 {
+    color: #004aad;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.skill-card p {
+    color: #555;
+    margin: 0;
+}
+.skill-card {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+}
+.skill-card h3 {
+    color: #004aad;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+.skill-card p {
+    color: #555;
+    margin: 0;
 }

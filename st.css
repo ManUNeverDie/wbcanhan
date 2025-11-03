@@ -1,0 +1,138 @@
+/* ==== Giao diện chung cho các trang ngôn ngữ lập trình ==== */
+body {
+    background: #f6f8ff;
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    color: #333;
+}
+
+/* Header kế thừa từ style.css */
+header {
+    background: #004aad;
+    color: white;
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover, nav a.active {
+    color: #ffda44;
+}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header h1 {
+    font-size: 1.8em;
+}
+
+/* Nội dung chính */
+main {
+    width: 100%;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 30px;
+}
+
+article {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Tiêu đề chính */
+h2 {
+    color: #004aad;
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #004aad;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Mục phụ */
+h3 {
+    color: #007bff;
+    margin-top: 35px;
+}
+
+/* Ô nội dung phụ */
+.sub-card {
+    background: #f0f5ff;
+    border-left: 5px solid #004aad;
+    padding: 15px 20px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+/* Code block */
+pre {
+    background: #1e1e1e;
+    color: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.5;
+    font-family: "Consolas", monospace;
+}
+
+code {
+    color: #ffda44;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+
+/* Hiệu ứng nhỏ */
+section {
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    article {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+}

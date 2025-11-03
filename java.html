@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng quan về ngôn ngữ lập trình Java</title>
+    <link rel="stylesheet" href="css/st.css">
+</head>
+<body>
+    <header>
+        <div class="logo-area">
+            <img src="img/logo.jpg" alt="Logo Linh With Soft" class="logo">
+            <h1>Linh With Soft</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="about.html">Lập trình</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="java-content">
+            <h2>Những điều cần biết về ngôn ngữ lập trình Java</h2>
+
+            <section>
+                <h3>1. Khái niệm</h3>
+                <p>Java là một ngôn ngữ lập trình hướng đối tượng, đa nền tảng với triết lý "Write Once, Run Anywhere" 
+                (viết một lần, chạy mọi nơi). Java được thiết kế để đơn giản, an toàn và mạnh mẽ, được sử dụng rộng rãi 
+                từ phát triển ứng dụng doanh nghiệp, mobile (Android) đến các hệ thống lớn.</p>
+            </section>
+
+            <section>
+                <h3>2. Java là gì?</h3>
+                <p>Java là ngôn ngữ lập trình hướng đối tượng thuần túy, được biên dịch thành bytecode và chạy trên 
+                Java Virtual Machine (JVM). Điều này giúp Java có thể chạy trên bất kỳ nền tảng nào có cài đặt JVM mà 
+                không cần biên dịch lại.</p>
+            </section>
+
+            <section>
+                <h3>3. Lịch sử phát triển</h3>
+                <p>Java được phát triển bởi James Gosling và đội ngũ tại Sun Microsystems vào năm 1991, ban đầu có tên 
+                "Oak". Năm 1995, Java được phát hành chính thức với tên gọi hiện tại. Năm 2010, Oracle Corporation mua lại 
+                Sun Microsystems và tiếp tục phát triển Java. Các phiên bản nổi bật: Java 8 (2014), Java 11 (2018 - LTS), 
+                Java 17 (2021 - LTS), và hiện tại là Java 21 (2023 - LTS).</p>
+            </section>
+
+            <section>
+                <h3>4. Các kiểu dữ liệu cơ bản</h3>
+                <div class="sub-card">
+                    <p><strong>Kiểu số nguyên:</strong></p>
+                    <p>• byte: 8-bit (-128 đến 127)</p>
+                    <p>• short: 16-bit (-32,768 đến 32,767)</p>
+                    <p>• int: 32-bit (khoảng ±2 tỷ)</p>
+                    <p>• long: 64-bit (số rất lớn)</p>
+                    
+                    <p><strong>Kiểu số thực:</strong></p>
+                    <p>• float: 32-bit (ví dụ: 3.14f)</p>
+                    <p>• double: 64-bit (ví dụ: 3.14159)</p>
+                    
+                    <p><strong>Kiểu khác:</strong></p>
+                    <p>• char: Ký tự Unicode (ví dụ: 'A')</p>
+                    <p>• boolean: true hoặc false</p>
+                    <p>• String: Chuỗi ký tự (ví dụ: "Hello")</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>5. Cấu trúc chương trình cơ bản</h3>
+                <div class="sub-card">
+                    <pre><code>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!");
+    }
+}</code></pre>
+                    <p><strong>Giải thích:</strong></p>
+                    <p>• public class: Khai báo lớp công khai</p>
+                    <p>• main(): Phương thức chính để chạy chương trình</p>
+                    <p>• static: Có thể gọi mà không cần tạo đối tượng</p>
+                    <p>• void: Không trả về giá trị</p>
+                    <p>• System.out.println(): In ra màn hình</p>
+                    <p>• Tên file phải trùng với tên class (HelloWorld.java)</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>6. Biến và hằng số</h3>
+                <div class="sub-card">
+                    <pre><code>// Khai báo biến
+int age = 20;
+double price = 99.99;
+String name = "Linh";
+boolean isStudent = true;
+
+// Khai báo hằng số
+final double PI = 3.14159;
+final int MAX_SIZE = 100;
+
+// Ép kiểu
+int x = (int) 3.14;  // x = 3
+String numStr = String.valueOf(123);</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>7. Các cấu trúc điều khiển</h3>
+                <div class="sub-card">
+                    <p><strong>Câu lệnh điều kiện if-else:</strong></p>
+                    <pre><code>if (diem >= 8.0) {
+    System.out.println("Giỏi");
+} else if (diem >= 6.5) {
+    System.out.println("Khá");
+} else {
+    System.out.println("Trung bình");
+}</code></pre>
+
+                    <p><strong>Switch-case:</strong></p>
+                    <pre><code>switch (day) {
+    case 1:
+        System.out.println("Thứ hai");
+        break;
+    case 2:
+        System.out.println("Thứ ba");
+        break;
+    default:
+        System.out.println("Ngày khác");
+}</code></pre>
+
+                    <p><strong>Vòng lặp for:</strong></p>
+                    <pre><code>for (int i = 0; i < 5; i++) {
+    System.out.println(i);
+}
+
+// Enhanced for loop
+int[] numbers = {1, 2, 3, 4, 5};
+for (int num : numbers) {
+    System.out.println(num);
+}</code></pre>
+
+                    <p><strong>Vòng lặp while:</strong></p>
+                    <pre><code>int count = 0;
+while (count < 5) {
+    System.out.println(count);
+    count++;
+}</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>8. Phương thức (Methods)</h3>
+                <div class="sub-card">
+                    <pre><code>public class Calculator {
+    // Phương thức có trả về
+    public int cong(int a, int b) {
+        return a + b;
+    }
+    
+    // Phương thức không trả về
+    public void chao(String name) {
+        System.out.println("Xin chào, " + name);
+    }
+    
+    // Phương thức static
+    public static double tinhDienTich(double r) {
+        return Math.PI * r * r;
+    }
+}
+
+// Sử dụng
+Calculator calc = new Calculator();
+int ketqua = calc.cong(5, 3);
+calc.chao("Linh");
+double dienTich = Calculator.tinhDienTich(5.0);</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>9. Mảng (Arrays)</h3>
+                <div class="sub-card">
+                    <pre><code>// Khai báo và khởi tạo mảng
+int[] numbers = {1, 2, 3, 4, 5};
+String[] names = new String[3];
+
+// Truy cập phần tử
+numbers[0] = 10;
+System.out.println(numbers[0]);  // 10
+
+// Độ dài mảng
+System.out.println(numbers.length);  // 5
+
+// Duyệt mảng
+for (int num : numbers) {
+    System.out.println(num);
+}</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>10. Lập trình hướng đối tượng (OOP)</h3>
+                <div class="sub-card">
+                    <pre><code>public class Student {
+    // Thuộc tính (attributes)
+    private String name;
+    private int age;
+    
+    // Constructor
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    
+    // Getter và Setter
+    public String getName() {
+        return name;
+    }
+    
+    public void setName(String name) {
+        this.name = name;
+    }
+    
+    // Phương thức
+    public void displayInfo() {
+        System.out.println("Tên: " + name);
+        System.out.println("Tuổi: " + age);
+    }
+}
+
+// Sử dụng
+Student sv = new Student("Linh", 20);
+sv.displayInfo();</code></pre>
+                    <p><strong>4 tính chất của OOP:</strong></p>
+                    <p>• Tính đóng gói (Encapsulation)</p>
+                    <p>• Tính kế thừa (Inheritance)</p>
+                    <p>• Tính đa hình (Polymorphism)</p>
+                    <p>• Tính trừu tượng (Abstraction)</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>11. Collections Framework</h3>
+                <div class="sub-card">
+                    <p><strong>ArrayList:</strong></p>
+                    <pre><code>import java.util.ArrayList;
+
+ArrayList&lt;String&gt; list = new ArrayList&lt;&gt;();
+list.add("Java");
+list.add("Python");
+list.add("C++");
+System.out.println(list.get(0));  // "Java"</code></pre>
+
+                    <p><strong>HashMap:</strong></p>
+                    <pre><code>import java.util.HashMap;
+
+HashMap&lt;String, Integer&gt; map = new HashMap&lt;&gt;();
+map.put("Java", 1);
+map.put("Python", 2);
+System.out.println(map.get("Java"));  // 1</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>12. Xử lý ngoại lệ (Exception Handling)</h3>
+                <div class="sub-card">
+                    <pre><code>try {
+    int result = 10 / 0;
+} catch (ArithmeticException e) {
+    System.out.println("Không thể chia cho 0!");
+} catch (Exception e) {
+    System.out.println("Lỗi: " + e.getMessage());
+} finally {
+    System.out.println("Luôn được thực thi");
+}</code></pre>
+                    <p>Java có 2 loại exception: Checked và Unchecked Exception.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>13. Ứng dụng của Java</h3>
+                <p>Java được sử dụng rộng rãi trong:</p>
+                <div class="sub-card">
+                    <p>• Phát triển ứng dụng Android</p>
+                    <p>• Ứng dụng doanh nghiệp (Enterprise Applications)</p>
+                    <p>• Web Development (Spring, Java EE)</p>
+                    <p>• Phần mềm máy tính để bàn (Desktop Apps)</p>
+                    <p>• Big Data (Hadoop, Apache Spark)</p>
+                    <p>• Cloud Computing</p>
+                    <p>• Game Development (Minecraft)</p>
+                    <p>• IoT và Embedded Systems</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>14. Ưu điểm của Java</h3>
+                <div class="sub-card">
+                    <p>✓ Đa nền tảng (Write Once, Run Anywhere)</p>
+                    <p>✓ Hướng đối tượng thuần túy</p>
+                    <p>✓ Bảo mật cao</p>
+                    <p>✓ Quản lý bộ nhớ tự động (Garbage Collection)</p>
+                    <p>✓ Thư viện chuẩn phong phú</p>
+                    <p>✓ Cộng đồng lớn, nhiều framework mạnh mẽ</p>
+                    <p>✓ Ổn định và đáng tin cậy</p>
+                    <p>✓ Hỗ trợ đa luồng (Multithreading)</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>15. Nhược điểm của Java</h3>
+                <div class="sub-card">
+                    <p>• Tốc độ chậm hơn C/C++</p>
+                    <p>• Tiêu tốn nhiều bộ nhớ</p>
+                    <p>• Cú pháp dài dòng (verbose)</p>
+                    <p>• Khởi động chậm (JVM startup time)</p>
+                    <p>• Không phù hợp cho lập trình hệ thống</p>
+                    <p>• Giao diện desktop không đẹp bằng các nền tảng native</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>16. Framework và công nghệ phổ biến</h3>
+                <div class="sub-card">
+                    <p><strong>Web Development:</strong> Spring, Spring Boot, Java EE, JSF</p>
+                    <p><strong>Testing:</strong> JUnit, TestNG, Mockito</p>
+                    <p><strong>Build Tools:</strong> Maven, Gradle</p>
+                    <p><strong>ORM:</strong> Hibernate, JPA</p>
+                    <p><strong>Mobile:</strong> Android SDK</p>
+                    <p><strong>Big Data:</strong> Apache Hadoop, Apache Spark</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>17. JDK, JRE và JVM</h3>
+                <div class="sub-card">
+                    <p><strong>JVM (Java Virtual Machine):</strong> Môi trường chạy bytecode</p>
+                    <p><strong>JRE (Java Runtime Environment):</strong> JVM + thư viện để chạy ứng dụng</p>
+                    <p><strong>JDK (Java Development Kit):</strong> JRE + công cụ phát triển (compiler, debugger)</p>
+                    <p>Lập trình viên cần JDK, người dùng chỉ cần JRE.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>18. Lời khuyên cho người mới học</h3>
+                <div class="sub-card">
+                    <p>→ Nắm vững cú pháp cơ bản và OOP</p>
+                    <p>→ Thực hành với nhiều bài tập nhỏ</p>
+                    <p>→ Học Collections Framework kỹ</p>
+                    <p>→ Hiểu về exception handling</p>
+                    <p>→ Làm quen với IDE (Eclipse, IntelliJ IDEA)</p>
+                    <p>→ Học Spring Boot sau khi vững Java core</p>
+                    <p>→ Tham gia cộng đồng và đọc code mẫu</p>
+                    <p>→ Làm project thực tế để nâng cao kỹ năng</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>19. Tài nguyên học Java</h3>
+                <div class="sub-card">
+                    <p>📚 Oracle Java Documentation: docs.oracle.com/javase</p>
+                    <p>📚 Java Tutorial: w3schools.com/java</p>
+                    <p>📚 GeeksforGeeks Java</p>
+                    <p>📚 Baeldung: baeldung.com</p>
+                    <p>📚 Sách: "Head First Java", "Effective Java"</p>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Linh With Soft. All rights reserved.</p>
+    </footer>
+</body>
+</html>

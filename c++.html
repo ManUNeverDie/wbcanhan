@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tổng quan về ngôn ngữ lập trình C++</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/st.css">
 </head>
 <body>
     <header>
@@ -15,7 +15,7 @@
         <nav>
             <ul>
                 <li><a href="index.html">Trang chủ</a></li>
-                <li><a href="about.html">Giới thiệu</a></li>
+                <li><a href="about.html">Lập trình</a></li>
                 <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Liên hệ</a></li>
             </ul>
@@ -37,6 +37,146 @@
                 <h3>2. C++ là gì?</h3>
                 <p>C++ (đọc là "C plus plus") là một ngôn ngữ lập trình biên dịch, kiểu tĩnh và đa mẫu hình (multi-paradigm), 
                 kết hợp lập trình hướng đối tượng, thủ tục và tổng quát.</p>
+            </section>
+
+            <section>
+                <h3>3. Lịch sử phát triển</h3>
+                <p>C++ được Bjarne Stroustrup phát triển vào năm 1979 tại Bell Labs như một phần mở rộng của ngôn ngữ C. 
+                Ban đầu được gọi là "C with Classes", sau đó đổi tên thành C++ vào năm 1983. Ngôn ngữ này tiếp tục được 
+                cải tiến qua nhiều phiên bản như C++98, C++11, C++14, C++17, C++20 và mới nhất là C++23.</p>
+            </section>
+
+            <section>
+                <h3>4. Các kiểu dữ liệu cơ bản</h3>
+                <div class="sub-card">
+                    <p><strong>int:</strong> Số nguyên (ví dụ: 10, -5, 0)</p>
+                    <p><strong>float, double:</strong> Số thực (ví dụ: 3.14, -0.5)</p>
+                    <p><strong>char:</strong> Ký tự đơn (ví dụ: 'A', 'x')</p>
+                    <p><strong>bool:</strong> Giá trị logic true/false</p>
+                    <p><strong>string:</strong> Chuỗi ký tự (ví dụ: "Hello World")</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>5. Cấu trúc chương trình cơ bản</h3>
+                <div class="sub-card">
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+
+int main() {
+    cout &lt;&lt; "Hello, World!" &lt;&lt; endl;
+    return 0;
+}</code></pre>
+                    <p><strong>Giải thích:</strong></p>
+                    <p>• #include &lt;iostream&gt;: Thư viện nhập xuất dữ liệu</p>
+                    <p>• using namespace std: Sử dụng không gian tên chuẩn</p>
+                    <p>• int main(): Hàm chính của chương trình</p>
+                    <p>• cout: Xuất dữ liệu ra màn hình</p>
+                    <p>• return 0: Kết thúc chương trình thành công</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>6. Các cấu trúc điều khiển</h3>
+                <div class="sub-card">
+                    <p><strong>Câu lệnh điều kiện if-else:</strong></p>
+                    <pre><code>if (dieu_kien) {
+    // Thực hiện khi đúng
+} else {
+    // Thực hiện khi sai
+}</code></pre>
+
+                    <p><strong>Vòng lặp for:</strong></p>
+                    <pre><code>for (int i = 0; i &lt; 10; i++) {
+    // Lặp lại 10 lần
+}</code></pre>
+
+                    <p><strong>Vòng lặp while:</strong></p>
+                    <pre><code>while (dieu_kien) {
+    // Lặp khi điều kiện đúng
+}</code></pre>
+                </div>
+            </section>
+
+            <section>
+                <h3>7. Hàm (Functions)</h3>
+                <div class="sub-card">
+                    <pre><code>int cong(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    int ketqua = cong(5, 3);
+    cout &lt;&lt; "Kết quả: " &lt;&lt; ketqua;
+    return 0;
+}</code></pre>
+                    <p>Hàm giúp tổ chức code tốt hơn, tái sử dụng được và dễ bảo trì.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>8. Mảng (Arrays)</h3>
+                <div class="sub-card">
+                    <pre><code>int numbers[5] = {1, 2, 3, 4, 5};
+cout &lt;&lt; numbers[0]; // In ra 1</code></pre>
+                    <p>Mảng lưu trữ nhiều giá trị cùng kiểu dữ liệu, truy cập qua chỉ số (index).</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>9. Con trỏ (Pointers)</h3>
+                <div class="sub-card">
+                    <pre><code>int x = 10;
+int *ptr = &x;  // ptr lưu địa chỉ của x
+cout &lt;&lt; *ptr;   // In ra giá trị 10</code></pre>
+                    <p>Con trỏ là biến lưu trữ địa chỉ bộ nhớ của biến khác, rất mạnh mẽ nhưng cần cẩn thận khi sử dụng.</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>10. Ứng dụng của C++</h3>
+                <p>C++ được sử dụng rộng rãi trong:</p>
+                <div class="sub-card">
+                    <p>• Phát triển game (Unreal Engine, Unity)</p>
+                    <p>• Hệ điều hành (Windows, Linux)</p>
+                    <p>• Phần mềm đồ họa và xử lý ảnh</p>
+                    <p>• Hệ thống nhúng và IoT</p>
+                    <p>• Trình duyệt web (Chrome, Firefox)</p>
+                    <p>• Cơ sở dữ liệu (MySQL, MongoDB)</p>
+                    <p>• Ứng dụng tài chính và ngân hàng</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>11. Ưu điểm của C++</h3>
+                <div class="sub-card">
+                    <p>✓ Hiệu suất cao, tốc độ xử lý nhanh</p>
+                    <p>✓ Kiểm soát tài nguyên hệ thống tốt</p>
+                    <p>✓ Hỗ trợ đa mẫu hình lập trình</p>
+                    <p>✓ Thư viện chuẩn phong phú (STL)</p>
+                    <p>✓ Cộng đồng lớn và nhiều tài liệu học tập</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>12. Thách thức khi học C++</h3>
+                <div class="sub-card">
+                    <p>• Cú pháp phức tạp hơn các ngôn ngữ hiện đại</p>
+                    <p>• Quản lý bộ nhớ thủ công (manual memory management)</p>
+                    <p>• Dễ gặp lỗi như memory leak, buffer overflow</p>
+                    <p>• Thời gian biên dịch có thể lâu với dự án lớn</p>
+                </div>
+            </section>
+
+            <section>
+                <h3>13. Lời khuyên cho người mới học</h3>
+                <div class="sub-card">
+                    <p>→ Bắt đầu với các khái niệm cơ bản: biến, vòng lặp, hàm</p>
+                    <p>→ Thực hành nhiều với các bài tập nhỏ</p>
+                    <p>→ Hiểu rõ con trỏ và quản lý bộ nhớ</p>
+                    <p>→ Học từ code của người khác</p>
+                    <p>→ Tham gia cộng đồng C++ để học hỏi kinh nghiệm</p>
+                </div>
             </section>
         </article>
     </main>
